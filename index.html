@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Honest Reaction</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #fcfcfc; /* Set a background color */
+            color: #fff; /* Set the text color to white */
+            font-family: 'Arial', sans-serif; /* Optional: Set a preferred font */
+        }
+
+        #video-container {
+            text-align: center;
+        }
+
+        #playButton {
+            display: block;
+            margin: 0 auto;
+            padding: 15px 20px;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #000dff; /* Green color for "good luck" theme */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #playButton:hover {
+            background-color: #f71414; /* Darker green on hover */
+        }
+
+        #myVideo {
+            width: 100%;
+            height: auto;
+            max-width: 1000px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <button id="playButton" onclick="playVideo()">Click Here To View My Honest Reaction</button>
+
+    <div id="video-container">
+        <video id="myVideo" controls>
+            <source src="video_2024-03-04_02-55-22.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <script>
+        function playVideo() {
+            var playButton = document.getElementById('playButton');
+            var videoContainer = document.getElementById('video-container');
+            var myVideo = document.getElementById('myVideo');
+
+            playButton.style.display = 'none';
+            videoContainer.style.display = 'block';
+
+            // Start playing the video
+            myVideo.play();
+        }
+    </script>
+
+</body>
+</html>
